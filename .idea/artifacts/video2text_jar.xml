@@ -1,0 +1,18 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="video2text:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/video2text_jar</output-path>
+    <root id="archive" name="video2text.jar">
+      <element id="module-output" name="video2text" />
+      <element id="file-copy" path="$PROJECT_DIR$/ffmpeg.exe" />
+      <element id="file-copy" path="$PROJECT_DIR$/ffplay.exe" />
+      <element id="file-copy" path="$PROJECT_DIR$/ffprobe.exe" />
+      <element id="file-copy" path="$PROJECT_DIR$/jilejintu.mp4" />
+      <element id="directory" name="img">
+        <element id="dir-copy" path="$PROJECT_DIR$/img" />
+      </element>
+      <element id="directory" name="txt">
+        <element id="dir-copy" path="$PROJECT_DIR$/txt" />
+      </element>
+    </root>
+  </artifact>
+</component>
