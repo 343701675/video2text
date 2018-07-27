@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.*;
 
-public class AsciiPic {
+public class AsciiPicUtils {
     private String imgString = "";   //储存转化后的字符串
 
     public String getImgString() {
@@ -81,9 +81,9 @@ public class AsciiPic {
             System.out.println("this file is not a file..."+1);
             return;
         }
-        AsciiPic asciiPic = new AsciiPic();
-        asciiPic.createAsciiPic(file1);
-        asciiPic.saveAsTxt("C:\\Users\\Administrator\\Desktop\\2.txt");
+        AsciiPicUtils asciiPicUtils = new AsciiPicUtils();
+        asciiPicUtils.createAsciiPic(file1);
+        asciiPicUtils.saveAsTxt("C:\\Users\\Administrator\\Desktop\\2.txt");
         System.out.println(file1.getName()+" is converted!");
     }
 }

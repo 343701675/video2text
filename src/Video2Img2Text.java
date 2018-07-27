@@ -1,10 +1,9 @@
-import utils.AsciiPic;
+import utils.AsciiPicUtils;
 import utils.Constants;
-import utils.ImageProcesserUtils;
 
 import java.io.*;
 
-public class Video2Text {
+public class Video2Img2Text {
     private final static String app_dir=System.getProperty("user.dir");
 
     /**
@@ -21,7 +20,7 @@ public class Video2Text {
         cmd.append(" -r "+frame);
         cmd.append(" -f image2");
         cmd.append(" -s " + reso);
-        cmd.append(" img/%d.jpg");
+        cmd.append(" "+Constants.img_dir+"/%d.jpg");
         boolean result = true;
         try{
             Process proc = Runtime.getRuntime().exec(cmd.toString());
@@ -58,9 +57,9 @@ public class Video2Text {
                             System.out.println("this file is not a file..."+(i+1));
                             continue;
                         }
-                        AsciiPic asciiPic = new AsciiPic();
-                        asciiPic.createAsciiPic(file1);
-                        asciiPic.saveAsTxt(app_dir+"\\"+Constants.txt_dir+"\\"+(i+1)+".txt");
+                        AsciiPicUtils asciiPicUtils = new AsciiPicUtils();
+                        asciiPicUtils.createAsciiPic(file1);
+                        asciiPicUtils.saveAsTxt(app_dir+"\\"+Constants.txt_dir+"\\"+(i+1)+".txt");
                         System.out.println(file1.getName()+" is converted!");
                     } catch(Exception e) {
                         e.printStackTrace();
